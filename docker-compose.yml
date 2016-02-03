@@ -1,0 +1,10 @@
+zookeeper:
+  build: .
+  ports:
+    - "2181:2181"
+    - "2888:2888"
+    - "3888:3888"
+
+  environment:
+    - ZK_SERVERS="server.1=192.168.1.22:2888:3888"
+    - ZK_ID=1
